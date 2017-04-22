@@ -8,8 +8,7 @@ var testTypeOptions = {
         return null;
       }
       var bound = Math.pow(2, zoom);
-      return 'http://www.astro.rug.nl/~irisarri/kidsmap/' +
-          '/' + zoom + '/' + normalizedCoord.x + '/' +
+      return zoom + '/' + normalizedCoord.x + '/' +
           (bound - normalizedCoord.y - 1) + '.png';
   },
   tileSize: new google.maps.Size(256, 256),
