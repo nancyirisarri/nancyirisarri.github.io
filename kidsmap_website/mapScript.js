@@ -65,7 +65,8 @@ function initialize() {
   });
   
   // wire up the drop-down menu
-  var dataMin = Number.MAX_VALUE, dataMax = -Number.MAX_VALUE;
+  var dataMin = Number.MAX_VALUE;
+  var dataMax = -Number.MAX_VALUE;
   google.maps.event.addDomListener(selectBox, 'change', function() {
     clearMapData();
     var variable = selectBox.options[selectBox.selectedIndex].value;
@@ -111,7 +112,7 @@ function initialize() {
           }
         };
       });
-      loadMapData(variable, dataMin, dataMax);
+      loadMapData(variable);
     }
   });
 
@@ -123,7 +124,7 @@ function initialize() {
 
   //var dataMin = 0;
   //var dataMax = 0;
-  function loadMapData(variable, dataMin, dataMax) {
+  function loadMapData(variable) {
     map.data.forEach(function(feature) {
       var value = feature.getProperty(variable);
 
