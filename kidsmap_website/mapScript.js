@@ -12,7 +12,7 @@ var testTypeOptions = {
           (bound - normalizedCoord.y - 1) + '.png';
   },
   tileSize: new google.maps.Size(256, 256),
-  maxZoom: 9,
+  maxZoom: 5,
   minZoom: 2,
   name: 'i-band'
 };
