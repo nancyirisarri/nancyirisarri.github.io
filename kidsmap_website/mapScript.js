@@ -111,7 +111,7 @@ function initialize() {
           }
         };
       });
-      loadMapData(variable);
+      loadMapData(variable, dataMin, dataMax);
     }
   });
 
@@ -123,7 +123,7 @@ function initialize() {
 
   //var dataMin = 0;
   //var dataMax = 0;
-  function loadMapData(variable) {
+  function loadMapData(variable, dataMin, dataMax) {
     map.data.forEach(function(feature) {
       var value = feature.getProperty(variable);
 
