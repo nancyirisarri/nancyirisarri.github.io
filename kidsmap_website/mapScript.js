@@ -17,7 +17,7 @@ var testTypeOptions = {
   name: 'i-band'
 };
 
-var testMapType = new google.maps.ImageMapType(testTypeOptions);
+//var testMapType = new google.maps.ImageMapType(testTypeOptions);
 
 // Create array that will hold clicked-on tiles.
 var fileList = [];
