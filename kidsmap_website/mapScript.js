@@ -122,8 +122,8 @@ function initialize() {
 
   map.data.addListener('rightclick', showFile);
 
-  //var dataMin = 0;
-  //var dataMax = 0;
+  var dataMin = 0;
+  var dataMax = 0;
   function loadMapData(variable) {
     map.data.forEach(function(feature) {
       var value = feature.getProperty(variable);
