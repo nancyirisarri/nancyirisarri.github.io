@@ -174,8 +174,8 @@ function initialize() {
       caretPercent = delta * 100; //make smaller
       console.log('percent is');
       console.log(caretPercent);
-      //document.getElementById('data-caret').style.display = 'block';
-      //document.getElementById('data-caret').style.paddingLeft = ((((event.feature.getProperty(variable)) - dataMin) / (dataMax - dataMin)) * 100) + '%';
+      document.getElementById('data-caret').style.display = 'block';
+      document.getElementById('data-caret').style.paddingLeft = ((((event.feature.getProperty(variable)) - dataMin) / (dataMax - dataMin)) * 100) + '%';
     }
     
     var info = event.feature.getProperty('info').split(",");
