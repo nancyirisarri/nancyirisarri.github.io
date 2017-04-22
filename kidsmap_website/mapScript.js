@@ -8,7 +8,8 @@ var testTypeOptions = {
         return null;
       }
       var bound = Math.pow(2, zoom);
-      return zoom + '/' + normalizedCoord.x + '/' +
+      return 'http://www.astro.rug.nl/~irisarri/kidsmap/' +
+          '/' + zoom + '/' + normalizedCoord.x + '/' +
           (bound - normalizedCoord.y - 1) + '.png';
   },
   tileSize: new google.maps.Size(256, 256),
@@ -19,10 +20,8 @@ var testTypeOptions = {
 
 var testMapType = new google.maps.ImageMapType(testTypeOptions);
 
-// Create array that will hold clicked-on tiles.
 var fileList = [];
 
-// Create array to hold Map Markers.
 var markers = [];
 
 function initialize() {
@@ -117,14 +116,10 @@ function initialize() {
     }
   });
 
-  // On click, extract from json file the image url and display on
-  // div with id image-box.
   map.data.addListener('click', showInfo);
 
-  // Listen on mouse double click. Handler adds the clicked-on image to a list.
   map.data.addListener('dblclick', addToFile);
 
-  // Listen on mouse right click. Handler shows the list created by the user.
   map.data.addListener('rightclick', showFile);
 
   var dataMin = 0;
