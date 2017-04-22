@@ -171,11 +171,11 @@ function initialize() {
       var delta = (value - dataMin) / (dataMax - dataMin);
       console.log('delta is');
       console.log(delta);
-      caretPercent = delta * 100;
+      caretPercent = delta * 100; //make smaller
       console.log('percent is');
       console.log(caretPercent);
       document.getElementById('data-caret').style.display = 'block';
-      document.getElementById('data-caret').style.paddingLeft = caretPercent + '%';
+      document.getElementById('data-caret').style.paddingLeft = ((((event.feature.getProperty(variable)) - dataMin) / (dataMax - dataMin)) * 100) + '%';
     }
     
     var info = event.feature.getProperty('info').split(",");
