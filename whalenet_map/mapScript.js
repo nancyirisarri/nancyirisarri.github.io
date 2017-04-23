@@ -41,7 +41,7 @@ function showChoice() {
     //script.src = 'data.jason';
     var variable = selectBox.options[selectBox.selectedIndex].value;
     
-    map.data.loadGeoJson(variable+'.json');
+    map.data.loadGeoJson('data/'+variable+'.json');
 
   var flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,

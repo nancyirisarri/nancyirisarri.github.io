@@ -1,0 +1,424 @@
+{ "type": "FeatureCollection",
+  "features": [
+   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "14:20:26",
+       "Locdate": "19.01.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "41.335",
+       "Longitude": "-70.266"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.266, 41.335]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "20:21:11",
+       "Locdate": "19.01.15",
+       "Locquality": "3",
+       "IQ": "66",
+       "Latitude": "41.334",
+       "Longitude": "-70.301"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.301, 41.334]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "11:26:29",
+       "Locdate": "22.01.15",
+       "Locquality": "2",
+       "IQ": "50",
+       "Latitude": "41.33",
+       "Longitude": "-70.287"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.287, 41.33]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:17:29",
+       "Locdate": "23.01.15",
+       "Locquality": "3",
+       "IQ": "68",
+       "Latitude": "41.335",
+       "Longitude": "-70.291"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.291, 41.335]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:17:29",
+       "Locdate": "23.01.15",
+       "Locquality": "3",
+       "IQ": "68",
+       "Latitude": "41.335",
+       "Longitude": "-70.291"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.291, 41.335]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "01:58:12",
+       "Locdate": "24.01.15",
+       "Locquality": "1",
+       "IQ": "56",
+       "Latitude": "41.323",
+       "Longitude": "-70.395"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.395, 41.323]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "03:16:22",
+       "Locdate": "25.01.15",
+       "Locquality": "A",
+       "IQ": "8",
+       "Latitude": "41.207",
+       "Longitude": "-70.386"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.386, 41.207]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:54:42",
+       "Locdate": "26.01.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "41.09",
+       "Longitude": "-70.192"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.192, 41.09]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:35:18",
+       "Locdate": "27.01.15",
+       "Locquality": "2",
+       "IQ": "58",
+       "Latitude": "40.985",
+       "Longitude": "-70.232"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.232, 40.985]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "07:27:19",
+       "Locdate": "27.01.15",
+       "Locquality": "1",
+       "IQ": "58",
+       "Latitude": "41.024",
+       "Longitude": "-70.277"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.277, 41.024]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:14:41",
+       "Locdate": "28.01.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "40.932",
+       "Longitude": "-70.419"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.419, 40.932]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "01:58:01",
+       "Locdate": "29.01.15",
+       "Locquality": "B",
+       "IQ": "0",
+       "Latitude": "40.943",
+       "Longitude": "-70.271"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.271, 40.943]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "08:47:09",
+       "Locdate": "29.01.15",
+       "Locquality": "1",
+       "IQ": "66",
+       "Latitude": "40.939",
+       "Longitude": "-70.304"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.304, 40.939]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "03:14:45",
+       "Locdate": "30.01.15",
+       "Locquality": "B",
+       "IQ": "0",
+       "Latitude": "41.044",
+       "Longitude": "-70.409"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.409, 41.044]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "08:30:50",
+       "Locdate": "30.01.15",
+       "Locquality": "2",
+       "IQ": "68",
+       "Latitude": "41.078",
+       "Longitude": "-70.45"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.45, 41.078]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "01:12:10",
+       "Locdate": "31.01.15",
+       "Locquality": "1",
+       "IQ": "50",
+       "Latitude": "41.165",
+       "Longitude": "-70.578"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.578, 41.165]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "08:16:29",
+       "Locdate": "01.02.15",
+       "Locquality": "0",
+       "IQ": "56",
+       "Latitude": "41.25",
+       "Longitude": "-70.502"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.502, 41.25]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "08:04:03",
+       "Locdate": "02.02.15",
+       "Locquality": "1",
+       "IQ": "58",
+       "Latitude": "41.099",
+       "Longitude": "-70.732"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.732, 41.099]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "06:09:45",
+       "Locdate": "03.02.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "41.12",
+       "Longitude": "-70.832"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.832, 41.12]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "07:41:42",
+       "Locdate": "04.02.15",
+       "Locquality": "1",
+       "IQ": "50",
+       "Latitude": "41.152",
+       "Longitude": "-70.341"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.341, 41.152]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:30:33",
+       "Locdate": "06.02.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "41.037",
+       "Longitude": "-70.585"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.585, 41.037]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "00:28:10",
+       "Locdate": "07.02.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "40.973",
+       "Longitude": "-70.627"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.627, 40.973]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "07:08:45",
+       "Locdate": "07.02.15",
+       "Locquality": "2",
+       "IQ": "68",
+       "Latitude": "40.925",
+       "Longitude": "-70.588"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.588, 40.925]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "06:58:55",
+       "Locdate": "08.02.15",
+       "Locquality": "3",
+       "IQ": "68",
+       "Latitude": "41.016",
+       "Longitude": "-70.743"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.743, 41.016]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "01:25:50",
+       "Locdate": "09.02.15",
+       "Locquality": "A",
+       "IQ": "0",
+       "Latitude": "41.067",
+       "Longitude": "-70.457"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.457, 41.067]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:45:47",
+       "Locdate": "10.02.15",
+       "Locquality": "2",
+       "IQ": "68",
+       "Latitude": "41.07",
+       "Longitude": "-70.788"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-70.788, 41.07]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:24:44",
+       "Locdate": "11.02.15",
+       "Locquality": "B",
+       "IQ": "0",
+       "Latitude": "40.871",
+       "Longitude": "-71.012"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-71.012, 40.871]
+     }
+   }
+,   { "type": "Feature",
+     "properties": {
+       "PlatformID": "39395",
+       "Loctime": "02:07:24",
+       "Locdate": "12.02.15",
+       "Locquality": "2",
+       "IQ": "68",
+       "Latitude": "40.787",
+       "Longitude": "-71.147"
+     },
+     "geometry": {
+       "type": "Point",
+       "coordinates": [-71.147, 40.787]
+     }
+   }
+ ]
+}
