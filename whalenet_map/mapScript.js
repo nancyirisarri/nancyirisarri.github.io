@@ -5,8 +5,8 @@ var selectBox;
 function initialize() {
   var mapDiv = document.getElementById('map-canvas');
   map = new google.maps.Map(mapDiv, {
-    zoom: 6,
-    center: new google.maps.LatLng(36.83776, -76.00996), 
+    zoom: 7,
+    center: new google.maps.LatLng(39.536, -74.137), 
   });
 
   selectBox = document.getElementById('choice-variable');
@@ -60,6 +60,8 @@ function showChoice() {
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
+  
+  flightPath.setMap(map);
 }
   
 google.maps.event.addDomListener(window, 'load', initialize);
