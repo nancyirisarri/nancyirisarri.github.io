@@ -6,7 +6,7 @@ function initialize() {
   var mapDiv = document.getElementById('map-canvas');
   map = new google.maps.Map(mapDiv, {
     zoom: 7,
-    center: new google.maps.LatLng(39.536, -74.137), 
+    center: new google.maps.LatLng(40.233, -73.463), 
   });
 
   selectBox = document.getElementById('choice-variable');
@@ -40,6 +40,10 @@ var flightPlanColors = {
   "seal_grey_beetle": "#FF0000",
   "seal_grey_madison": "#FFC300"
 }
+var mapCenter = {
+  "seal_grey_beetle": {lat: 40.233, lng: -73.463},
+  "seal_grey_madison": {lat: 41.335, lng: -70.266}
+}
 var flightPath;
 function showChoice() {
   map.data.forEach(function(feature) {
@@ -48,13 +52,12 @@ function showChoice() {
 
   var variable = selectBox.options[selectBox.selectedIndex].value;
   
-  var coordinates = flightPlanCoordinates[variable];
-  map.setCenter(coordinates[0]);
+  map.setCenter(mapCenter[variable]);
   
   map.data.loadGeoJson('data/'+variable+'.json');
 
   flightPath = new google.maps.Polyline({
-    path: coordinates,
+    path: flightPlanCoordinates[variable],
     geodesic: true,
     strokeColor: flightPlanColors[variable],
     strokeOpacity: 1.0,
