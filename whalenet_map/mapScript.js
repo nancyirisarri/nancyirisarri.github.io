@@ -57,9 +57,7 @@ function addflightPath() {
 function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
-  });
-  removeFlightPath();
-  
+  });  
   var variable = selectBox.options[selectBox.selectedIndex].value;
   
   map.setCenter(mapCenter[variable]);
@@ -73,7 +71,8 @@ function showChoice() {
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
-  
+  removeFlightPath();
+
   flightPath.setMap(map);
 }
   

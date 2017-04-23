@@ -108,9 +108,3 @@ html, body {
 select#choice-variable {
   overflow: auto;
 }
-select#choice-variable option[value="seal_grey_beetle"] { 
-  background-image:url(images/seal_grey_beetle.jpg);   
-}
-select#choice-variable option[value="seal_grey_madison"] { 
-  background-image:url(images/seal_grey_madison.jpg); 
-}
