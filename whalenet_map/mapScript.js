@@ -45,14 +45,15 @@ function showChoice() {
       map.data.remove(feature);
   });
   
-  map.setCenter(flightPlanCoordinates[variable][0]);
+  var coordinates = flightPlanCoordinates[variable];
+  map.setCenter(coordinates[0]);
        
   var variable = selectBox.options[selectBox.selectedIndex].value;
     
   map.data.loadGeoJson('data/'+variable+'.json');
 
   var flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates[variable],
+    path: coordinates,
     geodesic: true,
     strokeColor: flightPlanColors[variable],
     strokeOpacity: 1.0,
