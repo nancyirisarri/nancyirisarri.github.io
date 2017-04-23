@@ -10,31 +10,6 @@ function initialize() {
 
   map.data.loadGeoJson('data.json');
   
-  window.eqfeed_callback = function(results) {
-    for (var i = 0; i < results.features.length; i++) {
-      var coords = results.features[i].geometry.coordinates;
-      var latLng = new google.maps.LatLng(coords[1],coords[0]);
-      var marker = new google.maps.Marker({
-        position: latLng,
-        map: map
-      });
-      var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+'</div>'+
-        '<div id="bodyContent">'+
-          'Time: '+ results.features[i].properties.Loctime + ','
-          'Date: ' + results.features[i].properties.Locdate + ','
-          'Loc. Quality: ' + results.features[i].properties.Locquality
-        '</div>'+
-      '</div>';
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-    }
-  }
-  
   var flightPlanCoordinates = [
     {lat: 36.83776, lng: -76.00996},
     {lat: 36.92806, lng: -75.98014},
@@ -130,4 +105,29 @@ function initialize() {
   flightPath.setMap(map);
 }
 
+window.eqfeed_callback = function(results) {
+    for (var i = 0; i < results.features.length; i++) {
+      var coords = results.features[i].geometry.coordinates;
+      var latLng = new google.maps.LatLng(coords[1],coords[0]);
+      var marker = new google.maps.Marker({
+        position: latLng,
+        map: map
+      });
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+'</div>'+
+        '<div id="bodyContent">'+
+          'Time: '+ results.features[i].properties.Loctime + ','
+          'Date: ' + results.features[i].properties.Locdate + ','
+          'Loc. Quality: ' + results.features[i].properties.Locquality
+        '</div>'+
+      '</div>';
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+}
+  
 google.maps.event.addDomListener(window, 'load', initialize);
