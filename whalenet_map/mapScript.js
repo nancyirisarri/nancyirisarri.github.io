@@ -44,7 +44,9 @@ function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });
-     
+  
+  map.setCenter(flightPlanCoordinates[variable][0]);
+       
   var variable = selectBox.options[selectBox.selectedIndex].value;
     
   map.data.loadGeoJson('data/'+variable+'.json');
