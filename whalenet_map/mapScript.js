@@ -49,7 +49,8 @@ function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });
-
+  flightPath.setMap(null);
+  
   var variable = selectBox.options[selectBox.selectedIndex].value;
   
   map.setCenter(mapCenter[variable]);
