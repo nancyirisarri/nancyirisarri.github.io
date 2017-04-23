@@ -1,9 +1,108 @@
+// Adapted from https://developers.google.com/maps/documentation/javascript/examples/maptype-image?hl=nl
+
+// Required by Google Maps API, gets necessary tiles in current view.
+var testTypeOptions = {
+  getTileUrl: function(coord, zoom) {
+      var normalizedCoord = getNormalizedCoord(coord, zoom);
+      if (!normalizedCoord) {
+        return null;
+      }
+      var bound = Math.pow(2, zoom);
+      return zoom + '/' + normalizedCoord.x + '/' +
+          (bound - normalizedCoord.y - 1) + '.png';
+  },
+  tileSize: new google.maps.Size(256, 256),
+  maxZoom: 5,
+  minZoom: 3,
+  name: 'i-band'
+};
+
+var testMapType = new google.maps.ImageMapType(testTypeOptions);
+
+var fileList = [];
+
+var markers = [];
+
 function initialize() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: {lat: -33, lng: 151},
-    disableDefaultUI: true
-  });
+  var myLatlng = new google.maps.LatLng(-30, 0);
+
+  var mapOptions = {
+    center: myLatlng,
+    zoomControl: true,
+    zoom: 2,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_BOTTOM
+    },
+    panControl: true,
+    panControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_BOTTOM
+    },
+    streetViewControl: false,
+    mapTypeControlOptions: {
+      mapTypeIds: ['test']
+    }
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  map.mapTypes.set('test', testMapType);
+  map.setMapTypeId('test');
+
+  // Reference at https://developers.google.com/maps/documentation/javascript/datalayer
+  // Display data from .json file and hide markers.
+  map.data.loadGeoJson('data.json');
+  //map.data.setStyle(hideMarkers);
+
+  var selectBox = document.getElementById('tile-variable');
+  
+  var dataMin = 0;
+  var dataMax = 0;
+  function loadMapData(variable) {
+    map.data.forEach(function(feature) {
+      var value = feature.getProperty(variable);
+
+      // keep track of min and max values
+      if (value < dataMin) {
+          dataMin = value;
+      }
+      if (value > dataMax) {
+          dataMax = value;
+      }
+    });
+
+    document.getElementById('data-min').textContent = dataMin.toLocaleString();
+    document.getElementById('data-max').textContent = dataMax.toLocaleString();
+  }
+}
+
+// Taken from the Google example.
+// Normalizes the coords that tiles repeat across the x axis (horizontally)
+// like the standard Google map tiles.
+function getNormalizedCoord(coord, zoom) {
+  var y = coord.y;
+  var x = coord.x;
+
+  // tile range in one direction range is dependent on zoom level
+  // 0 = 1 tile, 1 = 2 tiles, 2 = 4 tiles, 3 = 8 tiles, etc
+  // from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Left_shift
+  // Bitwise shifting any number x to the left by y bits yields x * 2^y.
+  var tileRange = 1 << zoom;
+
+  // don't repeat across y-axis (vertically)
+  if (y < 0 || y >= tileRange) {
+    return null;
+  }
+
+  // repeat or not across x-axis
+  if (x < 0 || x >= tileRange) {
+    //x = (x % tileRange + tileRange) % tileRange;
+    return null;
+  }
+
+  return {
+    x: x,
+    y: y
+  };
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
