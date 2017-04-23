@@ -44,12 +44,12 @@ function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });
-  
-  //var coordinates = flightPlanCoordinates[variable];
-  //map.setCenter(coordinates[0]);
-       
+         
   var variable = selectBox.options[selectBox.selectedIndex].value;
-    
+  
+  var coordinates = flightPlanCoordinates[variable];
+  map.setCenter(coordinates[0]);
+  
   map.data.loadGeoJson('data/'+variable+'.json');
 
   var flightPath = new google.maps.Polyline({
