@@ -31,7 +31,7 @@ function initialize() {
     //infowindow.setPosition(event.feature.getGeometry().get());
     //infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
     infowindow.open(map, this);
-  });
+  };
   
   var flightPlanCoordinates = [
     {lat: 36.83776, lng: -76.00996},
