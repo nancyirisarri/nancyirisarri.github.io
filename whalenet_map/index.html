@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>WhaleNet Map</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="styles.css">
-    </meta>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Disabling the default UI</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
-  
-  <body id="map-container">
-
-    <div id="dropdown-box" class="nice-box">
-
-      <div>
-          <div id="tile-variable-text">
-            Select a property to show its values over the tiles.
-          </div>
-    
-          <div id="tile-variable-dropdown">
-            <select id="tile-variable">
-              <option value="clear"></option>
-              <option value="coaddIsValid">Coadd is_valid</option>
-              <option value="coaddImstatMax">Coadd imstat_max</option>
-              <option value="clear">Clear all</option>
-            </select>
-          </div>
-
-      </div>
-      <div id="legend">
-          <div id="data-min">min</div>
-          <div class="color-key"><span id="data-caret">&#x25c6;</span></div>
-          <div id="data-max">max</div>
-      </div>
-
-    </div>
-
-    <div id="info-box" class="nice-box">
-      <div class="title-style">Tile info</div>
-    </div>
-
-    <div id="comments-box" class="nice-box">
-      <div class="title-style">Manage list of tiles</div>
-    </div>
-
-    <div id="map">
+  <body>
+    <div id="map"></div>
     <script>
-    function initMap() {
-        var myLatLng = {lat: -25.363, lng: 131.044};
-
+      function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: myLatLng
-        });
-
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
+          center: {lat: -33, lng: 151},
+          disableDefaultUI: true
         });
       }
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCu4BSuZyvhRR-HvNKp_YzIYaaUCrZW84c"></script>
-    </div>
-  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
   </body>
 </html>
