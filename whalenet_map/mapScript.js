@@ -45,11 +45,20 @@ var mapCenter = {
   "seal_grey_madison": {lat: 41.335, lng: -70.266}
 }
 var flightPath;
+
+function removeFlightPath() {
+  flightPath.setMap(null);
+}
+
+function addflightPath() {
+  flightPath.setMap(map);
+}
+            
 function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });
-  flightPath.setMap(null);
+  removeFlightPath();
   
   var variable = selectBox.options[selectBox.selectedIndex].value;
   
