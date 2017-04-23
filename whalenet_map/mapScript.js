@@ -1,6 +1,7 @@
 // Adapted from https://developers.google.com/maps/documentation/javascript/examples/maptype-image?hl=nl
 
 var map;
+var selectBox;
 function initialize() {
   var mapDiv = document.getElementById('map-canvas');
   map = new google.maps.Map(mapDiv, {
@@ -8,7 +9,7 @@ function initialize() {
     center: new google.maps.LatLng(36.83776, -76.00996), 
   });
 
-  var selectBox = document.getElementById('choice-variable');
+  selectBox = document.getElementById('choice-variable');
   google.maps.event.addDomListener(selectBox, 'change', showChoice);
 
   //map.data.loadGeoJson('data.json');
