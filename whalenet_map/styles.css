@@ -105,6 +105,3 @@ html, body {
   font-size: 14px; 
   width: 14px
 }
-select#choice-variable {
-  overflow: auto;
-}
