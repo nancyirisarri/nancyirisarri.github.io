@@ -40,11 +40,12 @@ var flightPlanColors = {
   "seal_grey_beetle": "#FF0000",
   "seal_grey_madison": "#FFC300"
 }
+var flightPath;
 function showChoice() {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });
-         
+
   var variable = selectBox.options[selectBox.selectedIndex].value;
   
   var coordinates = flightPlanCoordinates[variable];
@@ -52,16 +53,13 @@ function showChoice() {
   
   map.data.loadGeoJson('data/'+variable+'.json');
 
-  var flightPath = new google.maps.Polyline({
+  flightPath = new google.maps.Polyline({
     path: coordinates,
     geodesic: true,
     strokeColor: flightPlanColors[variable],
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
-  
-  flightPath.setMap(map);
-    
 }
   
 google.maps.event.addDomListener(window, 'load', initialize);
