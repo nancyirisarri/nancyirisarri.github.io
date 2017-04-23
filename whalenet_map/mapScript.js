@@ -45,8 +45,8 @@ function showChoice() {
       map.data.remove(feature);
   });
   
-  var coordinates = flightPlanCoordinates[variable];
-  map.setCenter(coordinates[0]);
+  //var coordinates = flightPlanCoordinates[variable];
+  //map.setCenter(coordinates[0]);
        
   var variable = selectBox.options[selectBox.selectedIndex].value;
     
