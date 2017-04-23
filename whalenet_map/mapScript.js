@@ -5,7 +5,7 @@ var selectBox;
 function initialize() {
   var mapDiv = document.getElementById('map-canvas');
   map = new google.maps.Map(mapDiv, {
-    zoom: 3,
+    zoom: 6,
     center: new google.maps.LatLng(36.83776, -76.00996), 
   });
 
