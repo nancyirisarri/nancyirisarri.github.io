@@ -26,7 +26,6 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-  map.mapTypes.set('test', testMapType);
   map.setMapTypeId('test');
 
   // Reference at https://developers.google.com/maps/documentation/javascript/datalayer
