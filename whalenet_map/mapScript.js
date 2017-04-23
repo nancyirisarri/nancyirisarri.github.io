@@ -12,18 +12,20 @@ function initialize() {
 
   map.data.loadGeoJson('data.json');
   
-  map.data.addListener('click', function(event) {
+  //map.data.addListener('click', function(event) {
+  google.maps.event.addListener(marker, 'click', function() {      
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
         '<div id="bodyContent">'+
-          'Time: '+ event.feature.getProperty("Loctime") + ','
-          'Date: ' + event.feature.getProperty("Locdate") + ','
-          'Loc. Quality: ' + event.feature.getProperty("Locquality")
+          'Time: '+ marker.feature.getProperty("Loctime") + ','
+          'Date: ' + marker.feature.getProperty("Locdate") + ','
+          'Loc. Quality: ' + marker.feature.getProperty("Locquality")
         '</div>'+
       '</div>';
     infowindow.setContent(contentString);
-    infowindow.setPosition(event.feature.getGeometry().get());
-    infowindow.open(map);
+    //infowindow.setPosition(event.feature.getGeometry().get());
+    //infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+    infowindow.open(map, marker);
   });
   
   var flightPlanCoordinates = [
