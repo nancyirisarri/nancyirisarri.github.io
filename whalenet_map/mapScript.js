@@ -4,6 +4,7 @@ var fileList = [];
 
 var markers = [];
 
+var map;
 function initialize() {
   var myLatlng = new google.maps.LatLng(-30, 0);
 
@@ -18,13 +19,10 @@ function initialize() {
     panControlOptions: {
         position: google.maps.ControlPosition.RIGHT_BOTTOM
     },
-    streetViewControl: false,
-    mapTypeControlOptions: {
-      mapTypeIds: ['test']
-    }
+    streetViewControl: false
   };
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
   map.setMapTypeId('test');
 
