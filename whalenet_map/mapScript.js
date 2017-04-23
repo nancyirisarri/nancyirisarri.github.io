@@ -1,24 +1,5 @@
 // Adapted from https://developers.google.com/maps/documentation/javascript/examples/maptype-image?hl=nl
 
-// Required by Google Maps API, gets necessary tiles in current view.
-var testTypeOptions = {
-  getTileUrl: function(coord, zoom) {
-      var normalizedCoord = getNormalizedCoord(coord, zoom);
-      if (!normalizedCoord) {
-        return null;
-      }
-      var bound = Math.pow(2, zoom);
-      return zoom + '/' + normalizedCoord.x + '/' +
-          (bound - normalizedCoord.y - 1) + '.png';
-  },
-  tileSize: new google.maps.Size(256, 256),
-  maxZoom: 5,
-  minZoom: 3,
-  name: 'i-band'
-};
-
-var testMapType = new google.maps.ImageMapType(testTypeOptions);
-
 var fileList = [];
 
 var markers = [];
