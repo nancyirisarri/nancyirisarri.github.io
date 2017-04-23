@@ -8,10 +8,12 @@ function initialize() {
     center: new google.maps.LatLng(36.83776, -76.00996), 
   });
 
-  var infowindow = new google.maps.InfoWindow();
+  var selectBox = document.getElementById('choice-variable');
+  google.maps.event.addDomListener(selectBox, 'change', showChoice);
 
   //map.data.loadGeoJson('data.json');
   
+  var infowindow = new google.maps.InfoWindow();
   map.data.addListener('click', function(event) {
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
@@ -51,8 +53,5 @@ function showChoice() {
   flightPath.setMap(map);
     
 }
-
-var selectBox = document.getElementById('choice-variable');
-google.maps.event.addDomListener(selectBox, 'change', showChoice);
   
 google.maps.event.addDomListener(window, 'load', initialize);
