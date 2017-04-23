@@ -160,6 +160,22 @@ function initialize() {
     });
     markers.push(marker);
     
+    // if there is something selected on the drop-down box,
+    // show the data-caret at the tile's value
+    var selectBox = document.getElementById('tile-variable');
+    var variable = selectBox.options[selectBox.selectedIndex].value;
+    if (variable != 'clear') {
+      var value = parseFloat(event.feature.getProperty(variable));
+      var delta = (value - parseFloat(dataMin)) / (parseFloat(dataMax) - parseFloat(dataMin));
+      var caretPercent = delta * 100;
+      if(caretPercent >= 98) {
+        caretPercent = 97;
+      }
+      document.getElementById('data-caret').style.display = 'block';
+      document.getElementById('data-caret').style.margingLeft = caretPercent + '%';
+    }
+
+    
     var info = event.feature.getProperty('info').split(",");
     
     obName = event.feature.getProperty('obName');
