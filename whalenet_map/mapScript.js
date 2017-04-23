@@ -8,7 +8,7 @@ function initialize() {
     center: new google.maps.LatLng(36.83776, -76.00996), 
   });
 
-  map.data.loadGeoJson('data.json');
+  //map.data.loadGeoJson('data.json');
   
   var flightPlanCoordinates = [
     {lat: 36.83776, lng: -76.00996},
