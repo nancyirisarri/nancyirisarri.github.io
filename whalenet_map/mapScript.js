@@ -16,9 +16,9 @@ function initialize() {
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
         '<div id="bodyContent">'+
-          'Time: '+ event.feature.getProperty("Loctime") + ','
-          'Date: ' + event.feature.getProperty("Locdate") + ','
-          'Loc. Quality: ' + event.feature.getProperty("Locquality")
+          'Time: '+ event.feature.getProperty("Loctime") + ',' +
+          'Date: ' + event.feature.getProperty("Locdate") + ',' +
+          'Loc. Quality: ' + event.feature.getProperty("Locquality") +
         '</div>'+
       '</div>';
     infowindow.setContent(contentString);
