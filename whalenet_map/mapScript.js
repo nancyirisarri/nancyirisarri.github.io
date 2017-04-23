@@ -12,13 +12,7 @@ function initialize() {
 
   map.data.loadGeoJson('data.json');
   
-  map.addListener('click', function(event) {
-    showInfoWindow(event, map);
-  });
-  
-  //map.data.addListener('click', function(event) {
-  //google.maps.event.addListener(marker, 'click', function() {      
-  function showInfoWindow(event, map) {
+  map.data.addListener('click', function(event) {
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
         '<div id="bodyContent">'+
@@ -28,10 +22,10 @@ function initialize() {
         '</div>'+
       '</div>';
     infowindow.setContent(contentString);
-    //infowindow.setPosition(event.feature.getGeometry().get());
-    //infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
-    infowindow.open(map, this);
-  };
+    infowindow.setPosition(event.feature.getGeometry().get());
+    infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+    infowindow.open(map);
+  });
   
   var flightPlanCoordinates = [
     {lat: 36.83776, lng: -76.00996},
