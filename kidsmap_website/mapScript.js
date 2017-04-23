@@ -165,16 +165,15 @@ function initialize() {
     var selectBox = document.getElementById('tile-variable');
     var variable = selectBox.options[selectBox.selectedIndex].value;
     if (variable != 'clear') {
-      var value = parseFloat(event.feature.getProperty(variable));
-      var delta = (value - parseFloat(dataMin)) / (parseFloat(dataMax) - parseFloat(dataMin));
+      var value = event.feature.getProperty(variable);
+      var delta = (value - dataMin) / (dataMax - dataMin);
       var caretPercent = delta * 100;
       if(caretPercent >= 98) {
         caretPercent = 97;
       }
       document.getElementById('data-caret').style.display = 'block';
-      document.getElementById('data-caret').style.margingLeft = caretPercent + '%';
+      document.getElementById('data-caret').style.marginLeft = caretPercent + '%';
     }
-
     
     var info = event.feature.getProperty('info').split(",");
     
