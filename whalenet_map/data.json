@@ -269,36 +269,6 @@
        "type": "Point",
        "coordinates": [-74.555, 38.843]
      }
-   },
-   { "type": "Feature",
-     "properties": {
-       "PlatformID": "138116",
-       "Loctime": "04.06.15",
-       "Locdate": "02:39:24",
-       "Locquality": "3",
-       "IQ": "58",
-       "Latitude": "39.174",
-       "Longitude": "-74.648",
-     },
-     "geometry": {
-       "type": "Point",
-       "coordinates": [-74.648, 39.174]
-     }
-   },
-   { "type": "Feature",
-     "properties": {
-       "PlatformID": "138116",
-       "Loctime": "05.06.15",
-       "Locdate": "06:53:15",
-       "Locquality": "A",
-       "IQ": "8",
-       "Latitude": "39.536",
-       "Longitude": "-74.137",
-     },
-     "geometry": {
-       "type": "Point",
-       "coordinates": [-74.137, 39.536]
-     }
    }
  ]
 }
