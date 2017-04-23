@@ -15,11 +15,11 @@ function initialize() {
   map.data.addListener('click', function(event) {
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
-        '<div id="bodyContent">'+
-          'Time: '+ event.feature.getProperty("Loctime") + ',' +
-          'Date: ' + event.feature.getProperty("Locdate") + ',' +
+        '<div id="bodyContent"><strong>'+
+          'Time: '+ event.feature.getProperty("Loctime") + '<br>' +
+          'Date: ' + event.feature.getProperty("Locdate") + '<br>' +
           'Loc. Quality: ' + event.feature.getProperty("Locquality") +
-        '</div>'+
+        '</strong></div>'+
       '</div>';
     infowindow.setContent(contentString);
     infowindow.setPosition(event.feature.getGeometry().get());
