@@ -33,26 +33,12 @@ function initialize() {
   map.data.loadGeoJson('data.json');
   //map.data.setStyle(hideMarkers);
 
-  var selectBox = document.getElementById('tile-variable');
-  
-  var dataMin = 0;
-  var dataMax = 0;
-  function loadMapData(variable) {
-    map.data.forEach(function(feature) {
-      var value = feature.getProperty(variable);
-
-      // keep track of min and max values
-      if (value < dataMin) {
-          dataMin = value;
-      }
-      if (value > dataMax) {
-          dataMax = value;
-      }
-    });
-
-    document.getElementById('data-min').textContent = dataMin.toLocaleString();
-    document.getElementById('data-max').textContent = dataMax.toLocaleString();
-  }
+  //function loadMapData(variable) {
+    //map.data.forEach(function(feature) {
+      //var value = feature.getProperty(variable);
+    //document.getElementById('data-min').textContent = dataMin.toLocaleString();
+    //document.getElementById('data-max').textContent = dataMax.toLocaleString();
+  //}
 }
 
 // Taken from the Google example.
