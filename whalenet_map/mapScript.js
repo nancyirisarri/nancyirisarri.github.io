@@ -8,7 +8,23 @@ function initialize() {
     center: new google.maps.LatLng(36.83776, -76.00996), 
   });
 
-  //map.data.loadGeoJson('data.json');
+  var infowindow = new google.maps.InfoWindow();
+
+  map.data.loadGeoJson('data.json');
+  
+  map.data.addListener('click', function(event) {
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+'</div>'+
+        '<div id="bodyContent">'+
+          'Time: '+ event.feature.getProperty("Loctime") + ','
+          'Date: ' + event.feature.getProperty("Locdate") + ','
+          'Loc. Quality: ' + event.feature.getProperty("Locquality")
+        '</div>'+
+      '</div>';
+    infowindow.setContent(contentString);
+    infowindow.setPosition(event.feature.getGeometry().get());
+    infowindow.open(map);
+  });
   
   var flightPlanCoordinates = [
     {lat: 36.83776, lng: -76.00996},
@@ -103,31 +119,6 @@ function initialize() {
   });
   
   flightPath.setMap(map);
-}
-
-window.eqfeed_callback = function(results) {
-    for (var i = 0; i < results.features.length; i++) {
-      var coords = results.features[i].geometry.coordinates;
-      var latLng = new google.maps.LatLng(coords[1],coords[0]);
-      var marker = new google.maps.Marker({
-        position: latLng,
-        map: map
-      });
-      var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+'</div>'+
-        '<div id="bodyContent">'+
-          'Time: '+ results.features[i].properties.Loctime + ','
-          'Date: ' + results.features[i].properties.Locdate + ','
-          'Loc. Quality: ' + results.features[i].properties.Locquality
-        '</div>'+
-      '</div>';
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-    }
 }
   
 google.maps.event.addDomListener(window, 'load', initialize);
