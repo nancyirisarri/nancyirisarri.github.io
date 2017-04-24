@@ -58,8 +58,8 @@ function showChoice(variable) {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });  
-  flightPath.setMap(null);
-
+  //var variable = selectBox.options[selectBox.selectedIndex].value;
+  
   map.setCenter(mapCenter[variable]);
   
   map.data.loadGeoJson('data/'+variable+'.json');
@@ -71,6 +71,7 @@ function showChoice(variable) {
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
+  removeFlightPath();
 
   flightPath.setMap(map);
 }
