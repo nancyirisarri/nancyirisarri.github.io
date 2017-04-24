@@ -9,8 +9,8 @@ function initialize() {
     center: new google.maps.LatLng(40.233, -73.463), 
   });
 
-  selectBox = document.getElementById('choice-variable');
-  google.maps.event.addDomListener(selectBox, 'change', showChoice);
+  //selectBox = document.getElementById('choice-variable');
+  //google.maps.event.addDomListener(selectBox, 'change', showChoice);
 
   //map.data.loadGeoJson('data.json');
   
