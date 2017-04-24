@@ -54,11 +54,11 @@ function addflightPath() {
   flightPath.setMap(map);
 }
             
-function showChoice() {
+function showChoice(variable) {
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });  
-  var variable = selectBox.options[selectBox.selectedIndex].value;
+  //var variable = selectBox.options[selectBox.selectedIndex].value;
   
   map.setCenter(mapCenter[variable]);
   
