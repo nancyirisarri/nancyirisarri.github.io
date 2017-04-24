@@ -22,7 +22,7 @@ function initialize() {
   map = new google.maps.Map(mapDiv, {
     zoom: 7,
     center: new google.maps.LatLng(40.233, -73.463), 
-    mapTypeId: 'terrain'
+    mapTypeId: 'satellite'
   });
   
   infowindow = new google.maps.InfoWindow();
