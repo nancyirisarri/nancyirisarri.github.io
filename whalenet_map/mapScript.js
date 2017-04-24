@@ -55,6 +55,8 @@ function addflightPath() {
 }
             
 function showChoice(variable) {
+  flightPath.setMap(null);
+
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });  
@@ -72,7 +74,6 @@ function showChoice(variable) {
     strokeOpacity: 1.0,
     strokeWeight: 2
   });
-  removeFlightPath();
 
   flightPath.setMap(map);
 }
