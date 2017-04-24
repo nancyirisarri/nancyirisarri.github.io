@@ -50,7 +50,7 @@ function addflightPath() {
 }
             
 function showChoice(variable) {
-  if(flightPath != null) { {
+  if(flightPath != null) {
     flightPath.setMap(null);
   }
   
