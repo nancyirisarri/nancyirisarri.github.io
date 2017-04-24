@@ -55,7 +55,9 @@ function addflightPath() {
 }
             
 function showChoice(variable) {
-  flightPath.setMap(null);
+  if(typeof flightPath == google.maps.Polyline) {
+    flightPath.setMap(null);
+  }
 
   map.data.forEach(function(feature) {
       map.data.remove(feature);
