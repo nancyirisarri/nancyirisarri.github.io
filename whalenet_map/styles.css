@@ -105,7 +105,22 @@ html, body {
   font-size: 14px; 
   width: 14px
 }
-.variable-button{
-    height: 42px;
+.variable-button {
     width: 42px;
+    height: 42px;
+    padding: 0px;
+    line-height: 0px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+.variable-button:hover {
+    background-color: #F7F7F7;
+}
+.variable-button img {
+    float: center;
 }
