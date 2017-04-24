@@ -81,6 +81,8 @@ function initialize() {
       document.getElementById('data-min').textContent = 'min';
       document.getElementById('data-max').textContent = 'max';
     } else {
+      loadMapData(variable);
+
       map.data.setStyle(function(feature) {
         var low = [5, 69, 54];  // color of smallest datum
         var high = [151, 83, 34];   // color of largest datum
@@ -111,7 +113,6 @@ function initialize() {
           }
         };
       });
-      loadMapData(variable);
     }
   });
 
@@ -121,8 +122,6 @@ function initialize() {
 
   map.data.addListener('rightclick', showFile);
 
-  var dataMin = 0;
-  var dataMax = 0;
   function loadMapData(variable) {
     map.data.forEach(function(feature) {
       var value = feature.getProperty(variable);
