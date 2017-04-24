@@ -61,6 +61,7 @@ function showChoice(variable) {
   //var variable = selectBox.options[selectBox.selectedIndex].value;
   
   map.setCenter(mapCenter[variable]);
+  map.setZoom(7)
   
   map.data.loadGeoJson('data/'+variable+'.json');
 
