@@ -1,20 +1,15 @@
 // Adapted from https://developers.google.com/maps/documentation/javascript/examples/maptype-image?hl=nl
 
 var map;
-var selectBox;
+var infowindow;
 function initialize() {
   var mapDiv = document.getElementById('map-canvas');
   map = new google.maps.Map(mapDiv, {
     zoom: 7,
     center: new google.maps.LatLng(40.233, -73.463), 
   });
-
-  //selectBox = document.getElementById('choice-variable');
-  //google.maps.event.addDomListener(selectBox, 'change', showChoice);
-
-  //map.data.loadGeoJson('data.json');
   
-  var infowindow = new google.maps.InfoWindow();
+  infowindow = new google.maps.InfoWindow();
   map.data.addListener('click', function(event) {
     var contentString = '<div id="content">'+
       '<div id="siteNotice">'+'</div>'+
@@ -55,14 +50,17 @@ function addflightPath() {
 }
             
 function showChoice(variable) {
-  if(typeof flightPath == google.maps.Polyline) {
+  if(flightPath != null) { {
     flightPath.setMap(null);
   }
-
+  
+  if(infowindow != null) {
+    infowindow.close();
+  }
+  
   map.data.forEach(function(feature) {
       map.data.remove(feature);
   });  
-  //var variable = selectBox.options[selectBox.selectedIndex].value;
   
   map.setCenter(mapCenter[variable]);
   map.setZoom(7)
