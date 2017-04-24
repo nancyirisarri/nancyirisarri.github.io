@@ -24,25 +24,22 @@ function initialize() {
     center: new google.maps.LatLng(40.233, -73.463), 
   });
   
-  map.data.addListener('click', clickHandler(event));
-}
-
-function clickHandler(event) {
   infowindow = new google.maps.InfoWindow();
-
-  var contentString = '<div id="content">'+
-    '<div id="siteNotice">'+'</div>'+
-    '<div id="bodyContent"><strong>'+
-      'Time: '+ event.feature.getProperty("Loctime") + '<br>' +
-      'Date: ' + event.feature.getProperty("Locdate") + '<br>' +
-      'Loc. Quality: ' + event.feature.getProperty("Locquality") +
-      '</strong></div>'+
-    '</div>';
-  infowindow.setContent(contentString);
-
-  infowindow.setPosition(event.feature.getGeometry().get());
-  infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
-  infowindow.open(map);  
+  map.data.addListener('click', function(event) {
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+'</div>'+
+        '<div id="bodyContent"><strong>'+
+          'Time: '+ event.feature.getProperty("Loctime") + '<br>' +
+          'Date: ' + event.feature.getProperty("Locdate") + '<br>' +
+          'Loc. Quality: ' + event.feature.getProperty("Locquality") +
+        '</strong></div>'+
+      '</div>';
+    infowindow.setContent(contentString);
+    infowindow.setPosition(event.feature.getGeometry().get());
+    infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+    infowindow.open(map);    
+  });
+  
 }
 
 function showChoice(variable) {
