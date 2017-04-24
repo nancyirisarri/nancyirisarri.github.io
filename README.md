@@ -1,10 +1,16 @@
 # Purpose
-Files for web interfaces and visualizations.
+Web interfaces and visualizations.
+
+* http://nancyirisarri.github.io/kidsmap_webpage/
+* http://nancyirisarri.github.io/whalenet_map/
 
 # Content
-## KiDSMap
-A visualization of KiDS coadded regridded data frames on the sky.
+## kidsmap_webpage
+Visualization of KiDS coadded regridded data frames on the sky.
 
 It uses the Google Maps API. The file data.json and the file structure is the result of scripts in the repository https://github.com/nancyirisarri/kidsmap.
 
-The (latest) web page is at http://nancyirisarri.github.io/kidsmap_webpage/
+## whalenet_map
+Visualization of animal satellite tracking.
+
+Data retrieved from http://whale.wheelock.edu/whalenet-stuff/stop_cover.html.
